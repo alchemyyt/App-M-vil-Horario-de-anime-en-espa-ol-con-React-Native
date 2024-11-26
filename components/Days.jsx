@@ -1,12 +1,7 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text } from "react-native";
 import React, { useState, useEffect } from "react";
 import { getData } from "../lib/getAnimes";
-const styles = StyleSheet.create({
-  logo: {
-    width: 300,
-    height: 500,
-  },
-});
+
 export default function Days({ titulo, endPoint }) {
   const [animes, setAnimes] = useState([]);
   useEffect(() => {
@@ -21,12 +16,6 @@ export default function Days({ titulo, endPoint }) {
       {animes.map((anime) => (
         <View key={anime._id}>
           <Text>{anime.titles.esTitle}</Text>
-          <Image
-            style={styles.logo}
-            source={{
-              uri: anime.images.verticalImage,
-            }}
-          />
         </View>
       ))}
     </View>
