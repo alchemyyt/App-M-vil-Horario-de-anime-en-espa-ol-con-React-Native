@@ -11,7 +11,7 @@ import Days from "./components/Days";
 export default function App() {
   return (
     <ScrollView style={styles.container}>
-      <Days titulo="Lunes" endPoint="es/schedule/monday" onCli />
+      <Days titulo="Lunes" endPoint="es/schedule/monday" />
       <Days titulo="Martes" endPoint="es/schedule/tuesday" />
       <Days titulo="Miercoles" endPoint="es/schedule/wednesday" />
       <Days titulo="Jueves" endPoint="es/schedule/thursday" />

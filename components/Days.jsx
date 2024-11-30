@@ -11,7 +11,7 @@ export default function Days({ titulo, endPoint }) {
   }, []);
 
   return (
-    <View className="bg-red-600">
+    <View className="">
       <Text>{titulo}</Text>
       {animes.map((anime) => (
         <View key={anime._id}>
