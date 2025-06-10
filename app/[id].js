@@ -47,8 +47,8 @@ export default function Detail() {
 
   if (isLoading) {
     return (
-      <Text className="bg-gray-500 border-2 border-black m-2 p-2 text-center text-xl font-bold text-white">
-        Loading...
+      <Text className="text-center text-xl font-bold border-2 p-2 border-black my-2 rounded-lg">
+        Cargando...
       </Text>
     );
   }

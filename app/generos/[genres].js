@@ -28,8 +28,8 @@ export default function GenresDetail() {
 
   if (isLoading) {
     return (
-      <Text className="bg-gray-500 border-2 border-black m-2 p-2 text-center text-xl font-bold text-white">
-        Loading...
+      <Text className="text-center text-xl font-bold border-2 p-2 border-black my-2 rounded-lg">
+        Cargando...
       </Text>
     );
   }
@@ -59,7 +59,7 @@ export default function GenresDetail() {
                 uri: element.images.verticalImage,
               }}
             ></Image>
-            <Text className="absolute bottom-0 w-full text-2xl  text-center overflow-hidden font-bold text-amber-500 m-1  ">
+            <Text className=" absolute bottom-0 overflow-hidden text-xl text-center text-black bg-white/30 font-bold p-1 hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105 w-full">
               {element.titles.esTitle}
             </Text>
           </View>

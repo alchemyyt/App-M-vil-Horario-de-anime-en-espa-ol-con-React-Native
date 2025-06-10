@@ -18,8 +18,8 @@ export default function Days({ endPoint }) {
   }, []);
   if (isLoading) {
     return (
-      <Text className="bg-gray-500 border-2 border-black m-2 p-2 text-center text-xl font-bold text-white">
-        Loading...
+      <Text className="text-center text-xl font-bold border-2 p-2 border-black my-2 rounded-lg">
+        Cargando...
       </Text>
     );
   }
@@ -33,22 +33,27 @@ export default function Days({ endPoint }) {
   }
 
   return (
-    <View className="bg-gray-500 border-2 border-black m-2 p-2">
+    <View className="">
       {animes && animes.length === 0 ? (
-        <Text className="text-center text-xl font-bold text-white">
+        <Text className="text-center text-xl font-bold border-2 p-2 border-black my-2 rounded-lg ">
           Hoy no se emite ningun anime
         </Text>
       ) : (
         animes.map((anime) => (
-          <Link key={anime._id} href={anime._id}>
-            <View className="relative rounded-lg m-2">
+          <Link
+            key={anime._id}
+            href={anime._id}
+            className="border-2 border-black my-2 rounded-lg"
+          >
+            <View className="relative ">
               <Image
                 style={styles.imagenVertical}
                 source={{
                   uri: anime.images.verticalImage,
                 }}
+                className="rounded-lg"
               />
-              <Text className="absolute bottom-0 w-full text-2xl  text-center overflow-hidden font-bold text-amber-500 m-1  ">
+              <Text className=" absolute bottom-0 overflow-hidden text-xl text-center text-black bg-white/30 font-bold p-1 hover:text-amber-700 scale-100 transition-all duration-300 hover:scale-105 w-full  ">
                 {anime.titles.esTitle}
               </Text>
             </View>
